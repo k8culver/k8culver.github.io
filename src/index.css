@@ -20,6 +20,16 @@ body {
     margin: 0;
 }
 
+a:not(.button) {
+    font-family: 'Bitter', sans-serif;
+    color: var(--purple);
+    text-underline-offset: 0.2rem;
+}
+
+a:not(.button):hover {
+    color: var(--teal);
+}
+
 button,
 .button {
     font-family: 'Bitter', sans-serif;
