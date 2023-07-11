@@ -2,3 +2,78 @@
 @tailwind components;
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --teal: #3C4D58;
+    --teal-light: #A4C1C6;
+    --teal-hover: #BFC2BC;
+    --purple: #6E4B5A;
+    --purple-hover: #CFC1BD;
+    --white: #f9f5e8;
+    --black: #2f2b2a;
+    --transition: 0.5s linear;
+}
+  
+
+body {
+    margin: 0;
+}
+
+button,
+.button {
+    font-family: 'Bitter', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--white);
+    border: none;
+    border-radius: 25px;
+    padding: 0.95rem 0.15rem;
+    background-image: linear-gradient(to left, var(--teal) 0%, var(--teal) 45%, var(--white) 60%, var(--white) 100%);
+    background-size: 250%;
+    background-position: 0% 100%;
+    transition: background-position var(--transition);
+}
+
+.button--outline {
+    background-image: linear-gradient(to left, var(--white) 0%, var(--white) 45%, var(--teal) 60%, var(--teal) 100%);
+    color: var(--teal);
+}
+
+.button--outline--purple {
+    background-image: linear-gradient(to left, var(--white) 0%, var(--white) 45%, var(--purple) 60%, var(--purple) 100%);
+    color: var(--purple);
+}
+
+button span,
+.button span {
+    background-image: linear-gradient(to left, var(--teal) 0%, var(--teal) 45%, var(--teal-hover) 60%, var(--teal-hover) 100%);
+    background-size: 250% 100%;
+    padding: 0.8rem 1.2rem;
+    border-radius: 25px;
+    background-position: 100% 100%;
+    transition: background-position var(--transition);
+}
+
+.button--outline span {
+    background-image: linear-gradient(to left, var(--white) 0%, var(--white) 45%, var(--teal-hover) 60%, var(--teal-hover) 100%);
+}
+
+.button--outline--purple span {
+    background-image: linear-gradient(to left, var(--white) 0%, var(--white) 45%, var(--purple-hover) 60%, var(--purple-hover) 100%);
+}
+
+button:hover,
+.button:hover {
+    background-position: 100% 100%;
+}
+
+button:not(.button--outline, .button--outline--purple):hover,
+.button:not(.button--outline, .button--outline--purple):hover {
+    color: var(--teal);
+}
+
+button:hover span,
+.button:hover span {
+    background-position: 0% 100%;
+}
