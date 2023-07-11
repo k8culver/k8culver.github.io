@@ -15,7 +15,16 @@ module.exports = {
             sans: ['Montserrat', 'sans-serif'],
             serif: ['Bitter', 'serif'],
         },
-        extend: {},
+        extend: {
+            height: {
+                '30': '7.5rem',
+                '50': '12.5rem',
+            },
+            width: {
+                '30': '7.5rem',
+                '50': '12.5rem',
+            }
+        },
     },
     corePlugins: {
         preflight: false,

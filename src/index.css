@@ -12,7 +12,8 @@
     --purple-hover: #CFC1BD;
     --white: #f9f5e8;
     --black: #2f2b2a;
-    --transition: 0.5s linear;
+    --transition-slow: 0.5s linear;
+    --transition-fast: 0.2s linear;
 }
   
 
@@ -20,14 +21,30 @@ body {
     margin: 0;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    color: var(--teal);
+    margin-top: 0;
+}
+
+p {
+    font-family: 'Bitter', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--black);
+}
+
 a:not(.button) {
     font-family: 'Bitter', sans-serif;
     color: var(--purple);
     text-underline-offset: 0.2rem;
+    transition: color var(--transition-fast), opacity var(--transition-fast);
 }
 
 a:not(.button):hover {
     color: var(--teal);
+    opacity: 0.5;
 }
 
 button,
@@ -42,7 +59,7 @@ button,
     background-image: linear-gradient(to left, var(--teal) 0%, var(--teal) 45%, var(--white) 60%, var(--white) 100%);
     background-size: 250%;
     background-position: 0% 100%;
-    transition: background-position var(--transition);
+    transition: background-position var(--transition-slow);
 }
 
 .button--outline {
@@ -62,7 +79,7 @@ button span,
     padding: 0.8rem 1.2rem;
     border-radius: 25px;
     background-position: 100% 100%;
-    transition: background-position var(--transition);
+    transition: background-position var(--transition-slow);
 }
 
 .button--outline span {
