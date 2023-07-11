@@ -5,13 +5,13 @@ function GreyBlock(props) {
     const { components } = props;
     return (
         <>
-            <div class="flex items-end">
+            <div className="flex items-end">
                 <GreyBlockPizzazzTop />
             </div>
-            <div className='bg-black h-20'>
-                <div className="container m-auto">{ components }</div>
+            <div className='bg-black'>
+                <div className="container m-auto py-10">{ components }</div>
             </div>
-            <div class="flex items-start flex-row-reverse">
+            <div className="flex items-start flex-row-reverse">
                 <GreyBlockPizzazzBottom />
             </div>
         </>

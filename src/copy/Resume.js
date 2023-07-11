@@ -1,8 +1,8 @@
 function Resume() {
     return (
         <>
-            <h1 className="color-teal-light">A header</h1>
-            <p>Some copy</p>
+            <h1 className="text-teal-light">Where I've worked</h1>
+            <p className="text-white">Some copy</p>
         </>
     );
 }
