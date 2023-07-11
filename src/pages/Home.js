@@ -1,5 +1,5 @@
 import Button from "../components/Button";
-import GreyBlock from "../components/GreyBlock/GreyBlock";
+import LotsOfBlocks from "../components/LotsOfBlocks/LotsOfBlocks";
 import Resume from "../copy/Resume";
 
 function Home() {
@@ -13,7 +13,7 @@ function Home() {
                 <Button text='Test Button' type='outline--purple' />
                 
             </div>
-            <GreyBlock components={<Resume />} />
+            <LotsOfBlocks components={<Resume />} color="teal" />
         </>
     );
 }
