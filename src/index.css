@@ -28,11 +28,16 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
 }
 
-p {
+p, ul {
     font-family: 'Bitter', sans-serif;
-    font-size: 16px;
-    font-weight: 300;
+    font-size: 1rem;
+    font-weight: 200;
     color: var(--black);
+    letter-spacing: 0.025rem;
+}
+
+ul {
+    list-style-type: circle;
 }
 
 a:not(.button) {
@@ -49,6 +54,8 @@ a:not(.button):hover {
 
 button,
 .button {
+    display: block;
+    text-decoration: none;
     font-family: 'Bitter', sans-serif;
     font-size: 16px;
     font-weight: 500;
@@ -103,4 +110,26 @@ button:not(.button--outline, .button--outline--purple):hover,
 button:hover span,
 .button:hover span {
     background-position: 0% 100%;
+}
+
+
+
+
+
+
+.canvas {
+    border: 1px solid #ccc;
+    filter: grayscale(100%);
+    opacity: 0.5;
+  }
+  
+.reference-image {
+    filter: grayscale(100%);
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+.active .reference-image {
+    filter: none;
+    opacity: 1;
 }
