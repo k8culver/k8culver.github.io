@@ -111,25 +111,3 @@ button:hover span,
 .button:hover span {
     background-position: 0% 100%;
 }
-
-
-
-
-
-
-.canvas {
-    border: 1px solid #ccc;
-    filter: grayscale(100%);
-    opacity: 0.5;
-  }
-  
-.reference-image {
-    filter: grayscale(100%);
-    opacity: 0.5;
-    transition: opacity 0.3s ease;
-}
-
-.active .reference-image {
-    filter: none;
-    opacity: 1;
-}
