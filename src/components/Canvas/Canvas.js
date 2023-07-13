@@ -17,11 +17,9 @@ function Canvas() {
             canvas.width = imageGrey.width;
             canvas.height = imageGrey.height;
             ctx.drawImage(imageGrey, 0, 0);
-
         };
     
         const drawCircle = (x, y, radius) => {
-            // ctx.clearRect(0, 0, canvas.width, canvas.height); // added this to clear the canvas
             ctx.save();
             ctx.beginPath();
             ctx.arc(x, y, radius, 0, 2 * Math.PI);
@@ -30,6 +28,7 @@ function Canvas() {
             ctx.drawImage(image, 0, 0);
             ctx.restore();
         };
+        
         const handleMouseMove = (e) => {
             const rect = canvas.getBoundingClientRect();
             const x = e.clientX - rect.left;
@@ -57,7 +56,7 @@ function Canvas() {
         <div>
             <canvas ref={canvasRef} className='transition' />
             <img ref={imageRef} src={photo} alt="Hero Doodle" className='hidden' />
-            <img ref={imageRefGrey} src={photoGrey} alt="Hero Doodle" className='hidden' />
+            <img ref={imageRefGrey} src={photoGrey} alt="Hero Doodle Grey" className='hidden' />
         </div>
     );
 }

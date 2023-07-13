@@ -28,12 +28,17 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
 }
 
-p, ul {
+p, ul, a, label, ::placeholder {
     font-family: 'Bitter', sans-serif;
     font-size: 1rem;
-    font-weight: 200;
+    font-weight: 300;
     color: var(--black);
     letter-spacing: 0.025rem;
+}
+
+::placeholder {
+    color: var(--teal-light);
+    font-size: 0.875rem;
 }
 
 ul {

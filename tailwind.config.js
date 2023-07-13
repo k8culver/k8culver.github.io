@@ -7,7 +7,9 @@ module.exports = {
         colors: {
             'teal': '#3C4D58',
             'teal-light': '#A4C1C6',
+            'teal-hover': '#BFC2BC',
             'purple': '#6E4B5A',
+            'purple-hover': '#CFC1BD',
             'white': '#f9f5e8',
             'black': '#2f2b2a',
         },

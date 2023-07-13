@@ -1,21 +1,24 @@
-import Button from "../components/Button";
 import Canvas from "../components/Canvas/Canvas";
+import ContactForm from "../components/ContactForm";
 import LotsOfBlocks from "../components/LotsOfBlocks/LotsOfBlocks";
+import AboutMe from "../copy/AboutMe";
 import Resume from "../copy/Resume";
+import Reviews from "../copy/Reviews";
 
 function Home() {
     return (
         <>
             <Canvas />
             <div className="container m-auto">
-                <h1 className='text-teal font-light font-sans'>Hello my name is Kate</h1>
-                <p className='text-teal-black font-serif'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-                <Button text='Test Button' />
-                <Button text='Test Button' type='outline' />
-                <Button text='Test Button' type='outline--purple' />
+                <h1>Hello my name is Kate</h1>
+                <AboutMe />
                 
             </div>
             <LotsOfBlocks components={<Resume />} color="teal" />
+            <div className="container m-auto">
+                <Reviews />
+            </div>
+            <LotsOfBlocks components={<ContactForm />} color="teal" />
         </>
     );
 }
