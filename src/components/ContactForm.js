@@ -1,30 +1,50 @@
 import React, { useState } from 'react';
 import Button from './Button';
+import ReCAPTCHA from 'react-google-recaptcha';
+import axios from 'axios';
 
 function ContactForm() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [isSending, setIsSending] = useState(false);
+  const [isSent, setIsSent] = useState(false);
+  const [recaptchaValue, setRecaptchaValue] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Perform form submission logic here
-    console.log('Name:', name);
-    console.log('Email:', email);
-    console.log('Message:', message);
+    setIsSending(true);
 
-    // Reset form fields
-    setName('');
-    setEmail('');
-    setMessage('');
+    // Verify the reCAPTCHA response
+    if (recaptchaValue) {
+      // Send the email using a server-side endpoint
+      axios
+        .post('/api/send-email', { name, email, message, recaptchaValue })
+        .then((response) => {
+          setIsSending(false);
+          setIsSent(true);
+          console.log(response.data);
+        })
+        .catch((error) => {
+          setIsSending(false);
+          console.log(error);
+        });
+
+      // Reset form fields
+      setName('');
+      setEmail('');
+      setMessage('');
+      setRecaptchaValue('');
+    }
   };
 
   return (
-    <div className='inline-block'>
-        <form onSubmit={handleSubmit} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+    <div className='inline-block px-8 pt-6 pb-8 mb-4'>
+        <h2 className="text-teal-light">Contact Me</h2>
+        <form onSubmit={handleSubmit}>
             <div className="mb-4">
-                <label className="block text-sm mb-2" htmlFor="name">Name:</label>
+                <label className="block text-teal-light mb-2" htmlFor="name">Name:</label>
                 <input
                     className="appearance-none border border-teal-light border-solid rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     type="text"
@@ -36,7 +56,7 @@ function ContactForm() {
                 />
             </div>
             <div className="mb-4">
-                <label htmlFor="email" className="block text-sm mb-2">Email:</label>
+                <label htmlFor="email" className="block text-teal-light mb-2">Email:</label>
                 <input
                     className="appearance-none border border-teal-light border-solid rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     type="email"
@@ -48,7 +68,7 @@ function ContactForm() {
                 />
             </div>
             <div className="mb-4">
-                <label htmlFor="message" className="block text-sm mb-2">Message:</label>
+                <label htmlFor="message" className="block text-teal-light mb-2">Message:</label>
                 <textarea
                 className="appearance-none border border-teal-light border-solid rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     id="message"
@@ -58,7 +78,11 @@ function ContactForm() {
                     required
                 ></textarea>
             </div>
-            <Button text="Submit" />
+            <ReCAPTCHA
+                sitekey="your_recaptcha_site_key"
+                onChange={(value) => setRecaptchaValue(value)}
+            />
+            <Button text={`${isSending ? 'Sending...' : 'Submit'}`} type="submit" disabled={isSending || !recaptchaValue} />
         </form>
     </div>
 

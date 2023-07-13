@@ -16,8 +16,8 @@ function StyleGuide() {
             <a href="/">This is a link</a>
             <div class="grid md:grid-cols-4 gap-4 mt-10">
                 <Button text='Test Button' />
-                <Button text='Test Button' type='outline' />
-                <Button text='Test Button' type='outline--purple' />
+                <Button text='Test Button' styleType='outline' />
+                <Button text='Test Button' styleType='outline--purple' />
             </div>
         </div>
     </div>

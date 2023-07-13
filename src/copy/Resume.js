@@ -28,9 +28,9 @@ function Resume() {
             </ul>
             <div className="flex mt-10">
                 <div className="sm:mr-4">
-                    <Button text="Download My Resume" type="outline--purple" />
+                    <Button text="Download My Resume" styleType="outline--purple" />
                 </div>
-                <Button text="Stalk My LinkedIn" type="outline--purple" link="https://www.linkedin.com/in/kate-culver-333388143" />
+                <Button text="Stalk My LinkedIn" styleType="outline--purple" link="https://www.linkedin.com/in/kate-culver-333388143" />
             </div>
         </>
     );
