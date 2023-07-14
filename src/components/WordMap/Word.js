@@ -11,16 +11,29 @@ function Word(props) {
     };
 
     return (
-        <a href="#" style={{ fontSize: calculateFontSize(word.value) }} className="unstyled" onClick={(e) => handleFlip(e, id)}>
-            {
-                isFlipped ?
+        <div className="relative">
+            <div className={`
+                ${isFlipped ? 'absolute' : 'hidden'}
+                bottom-12
+                z-10
+                bg-teal-light
+                p-4
+                rounded
+                after:content-[''] 
+                after:top-full
+                after:absolute after:left-1/3
+                after:w-0 after:h-0 
+                after:border-solid after-border-transparent after:border-8 after:border-b-0 after:border-t-teal-light
+                `}
+            >
                 <p>{ word.description }</p>
-                :
+            </div>
+            <a href="#" style={{ fontSize: calculateFontSize(word.value), pointerEvents: isFlipped ? 'none' : 'auto' }} className="unstyled" onClick={(e) => handleFlip(e, id)}>
                 <span className={`${word.classes} font-semibold`}>
                     {word.text}
                 </span>
-            }
-        </a>
+            </a>
+        </div>
     );
   }
   

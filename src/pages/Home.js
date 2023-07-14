@@ -30,6 +30,8 @@ function Home() {
         { text: 'PHP', value: 1, classes: 'text-teal', description: '0.5 years professional' },
         { text: 'Assembly', value: 2, classes: 'text-purple', description: 'university training' },
         { text: 'Gatsby', value: 3, classes: 'text-teal-light', description: '2.5 years professional' },
+        { text: 'Elasticsearch', value: 2, classes: 'text-teal-light', description: '2.5 years professional' },
+        { text: 'Tailwind', value: 5, classes: 'text-teal', description: '1 years professional' },
       ];
 
 
