@@ -45,10 +45,15 @@ ul {
     list-style-type: circle;
 }
 
-a:not(.button) {
+a:not(.button, .unstyled) {
     font-family: 'Bitter', sans-serif;
     color: var(--purple);
     text-underline-offset: 0.2rem;
+    transition: color var(--transition-fast), opacity var(--transition-fast);
+}
+
+a.unstyled {
+    text-decoration: none;
     transition: color var(--transition-fast), opacity var(--transition-fast);
 }
 
