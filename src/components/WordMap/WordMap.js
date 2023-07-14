@@ -12,7 +12,7 @@ function WordMap(props) {
     };
 
     return (
-        <ul className="list-none flex flex-wrap items-center justify-center max-w-3xl m-auto">
+        <ul className="list-none px-4 flex flex-wrap items-center justify-center max-w-3xl m-auto">
             {
                 words.map((word, index) => {
                     return (

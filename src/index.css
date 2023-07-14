@@ -52,18 +52,31 @@ a:not(.button, .unstyled) {
     transition: color var(--transition-fast), opacity var(--transition-fast);
 }
 
-a.unstyled {
-    text-decoration: none;
-    transition: color var(--transition-fast), opacity var(--transition-fast);
-}
-
-a:not(.button):hover {
+a:not(.button, .unstyled):hover {
     color: var(--teal);
     opacity: 0.5;
 }
 
-button,
-.button {
+a.unstyled, button.unstyled {
+    font-family: 'Bitter', sans-serif;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color var(--transition-fast), opacity var(--transition-fast);
+    background: none;
+    border: none;
+}
+
+a.disabled, button.disabled,
+a.unstyled:hover, button.unstyled:hover {
+    opacity: 0.5;
+}
+
+a.disabled, button.disabled {
+    cursor: disabled;
+}
+
+button:not(.unstyled),
+.button:not(.unstyled) {
     display: block;
     text-decoration: none;
     font-family: 'Bitter', sans-serif;
@@ -89,8 +102,8 @@ button,
     color: var(--purple);
 }
 
-button span,
-.button span {
+button:not(.unstyled) span,
+.button:not(.unstyled) span {
     background-image: linear-gradient(to left, var(--teal) 0%, var(--teal) 45%, var(--teal-hover) 60%, var(--teal-hover) 100%);
     background-size: 250% 100%;
     padding: 0.8rem 1.2rem;
@@ -107,18 +120,18 @@ button span,
     background-image: linear-gradient(to left, var(--white) 0%, var(--white) 45%, var(--purple-hover) 60%, var(--purple-hover) 100%);
 }
 
-button:hover,
-.button:hover {
+button:not(.unstyled):hover,
+.button:not(.unstyled):hover {
     background-position: 100% 100%;
 }
 
-button:not(.button--outline, .button--outline--purple):hover,
-.button:not(.button--outline, .button--outline--purple):hover {
+button:not(.button--outline, .button--outline--purple, .unstyled):hover,
+.button:not(.button--outline, .button--outline--purple, .unstyled):hover {
     color: var(--teal);
 }
 
-button:hover span,
-.button:hover span {
+button:not(.unstyled):hover span,
+.button:not(.unstyled):hover span {
     background-position: 0% 100%;
 }
 

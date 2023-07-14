@@ -14,25 +14,25 @@ function Word(props) {
         <div className="relative">
             <div className={`
                 ${isFlipped ? 'absolute' : 'hidden'}
-                bottom-12
                 z-10
-                bg-teal-light
+                bg-teal
                 p-4
                 rounded
                 after:content-[''] 
                 after:top-full
                 after:absolute after:left-1/3
                 after:w-0 after:h-0 
-                after:border-solid after-border-transparent after:border-8 after:border-b-0 after:border-t-teal-light
+                after:border-solid after-border-transparent after:border-8 after:border-b-0 after:border-t-teal
                 `}
+                style={{ bottom: (calculateFontSize(word.value) + 14)}}
             >
-                <p>{ word.description }</p>
+                <p className="m-0 text-teal-light font-medium">{ word.description }</p>
             </div>
-            <a href="#" style={{ fontSize: calculateFontSize(word.value), pointerEvents: isFlipped ? 'none' : 'auto' }} className="unstyled" onClick={(e) => handleFlip(e, id)}>
+            <button style={{ fontSize: calculateFontSize(word.value), pointerEvents: isFlipped ? 'none' : 'auto' }} className={`unstyled ${isFlipped ? 'disabled' : ''}`} onClick={(e) => handleFlip(e, id)}>
                 <span className={`${word.classes} font-semibold`}>
                     {word.text}
                 </span>
-            </a>
+            </button>
         </div>
     );
   }
