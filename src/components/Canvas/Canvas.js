@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import photo from '../../static/test-photo.jpeg';
 import photoGrey from '../../static/test-photo-grey.png';
 
@@ -14,9 +14,30 @@ function Canvas() {
         const imageGrey = imageRefGrey.current;
     
         imageGrey.onload = () => {
-            canvas.width = imageGrey.width;
+            canvas.width = window.innerWidth;
             canvas.height = imageGrey.height;
             ctx.drawImage(imageGrey, 0, 0);
+            type(canvas.width/8, canvas.height/4, false);
+        };
+
+        const typeOut = (i, text, x, y) => {
+            setTimeout(() => {
+                ctx.fillText(text[i], x, y);
+                if (i < text.length - 1) {
+                    typeOut(i + 1, text, x + ctx.measureText(text[i]).width, y);
+                }
+            }, 100);
+        };
+
+        const type = (x, y, isInstant) => {
+            ctx.save();
+            ctx.font = '32px Bitter';
+            const text = 'Hello, my name is Kate.';
+            if(isInstant) {
+                ctx.fillText('Hello, my name is Kate.', x, y);
+            } else {
+                typeOut(0, text, x, y);
+            }
         };
     
         const drawCircle = (x, y, radius) => {
@@ -40,6 +61,7 @@ function Canvas() {
         const handleMouseOut = () => {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             ctx.drawImage(imageGrey, 0, 0);
+            type(canvas.width/8, canvas.height/4, true);
         };
     
         canvas.addEventListener('mousemove', handleMouseMove);

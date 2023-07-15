@@ -22,14 +22,14 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Bitter', sans-serif;
     font-weight: 300;
     color: var(--teal);
     margin-top: 0;
 }
 
 p, ul, a, label, ::placeholder {
-    font-family: 'Bitter', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
     font-weight: 300;
     color: var(--black);
@@ -46,7 +46,7 @@ ul {
 }
 
 a:not(.button, .unstyled) {
-    font-family: 'Bitter', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: var(--purple);
     text-underline-offset: 0.2rem;
     transition: color var(--transition-fast), opacity var(--transition-fast);
@@ -92,12 +92,12 @@ button:not(.unstyled),
     transition: background-position var(--transition-slow);
 }
 
-.button--outline {
+.button.button--outline {
     background-image: linear-gradient(to left, var(--white) 0%, var(--white) 45%, var(--teal) 60%, var(--teal) 100%);
     color: var(--teal);
 }
 
-.button--outline--purple {
+.button.button--outline--purple {
     background-image: linear-gradient(to left, var(--white) 0%, var(--white) 45%, var(--purple) 60%, var(--purple) 100%);
     color: var(--purple);
 }
@@ -112,11 +112,11 @@ button:not(.unstyled) span,
     transition: background-position var(--transition-slow);
 }
 
-.button--outline span {
+.button.button--outline span {
     background-image: linear-gradient(to left, var(--white) 0%, var(--white) 45%, var(--teal-hover) 60%, var(--teal-hover) 100%);
 }
 
-.button--outline--purple span {
+.button.button--outline--purple span {
     background-image: linear-gradient(to left, var(--white) 0%, var(--white) 45%, var(--purple-hover) 60%, var(--purple-hover) 100%);
 }
 
