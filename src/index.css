@@ -36,6 +36,13 @@ p, ul, a, label, ::placeholder {
     letter-spacing: 0.025rem;
 }
 
+.caption {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 300;
+    letter-spacing: 0.025rem;
+}
+
 ::placeholder {
     color: var(--teal-light);
     font-size: 0.875rem;

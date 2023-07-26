@@ -1,6 +1,7 @@
 import Canvas from "../components/Canvas/Canvas";
 import ContactForm from "../components/ContactForm";
 import LotsOfBlocks from "../components/LotsOfBlocks/LotsOfBlocks";
+import Timeline from "../components/Timeline/Timeline";
 import WordMap from "../components/WordMap/WordMap";
 import AboutMe from "../copy/AboutMe";
 import Resume from "../copy/Resume";
@@ -39,12 +40,10 @@ function Home() {
         <>
             <Canvas />
             <div className="container m-auto">
-                <h1>Hello my name is Kate</h1>
                 <AboutMe />
-                
             </div>
             <WordMap words={words} />
-            <LotsOfBlocks components={<Resume />} color="teal" />
+            <LotsOfBlocks components={<><Timeline /><Resume /></>} color="teal" />
             <div className="container m-auto">
                 <Reviews />
             </div>
