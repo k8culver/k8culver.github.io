@@ -25,6 +25,9 @@ module.exports = {
             width: {
                 '30': '7.5rem',
                 '50': '12.5rem',
+            },
+            gridTemplateColumns: {
+                'smallcenter': 'auto 0.25rem auto',
             }
         },
     },
