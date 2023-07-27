@@ -43,11 +43,12 @@ function Home() {
                 <AboutMe />
             </div>
             <WordMap words={words} />
-            <LotsOfBlocks components={<><Timeline /><Resume /></>} color="teal" />
+            <LotsOfBlocks components={<><Timeline /></>} color="teal" />
             <div className="container m-auto">
                 <Reviews />
             </div>
             <LotsOfBlocks components={<ContactForm />} color="teal" />
+            <p className="caption--small text-teal mb-0 pb-4">Conceptualized, designed, and developed by Kate Culver © 2023</p>
         </>
     );
 }
