@@ -2,8 +2,7 @@ function Timeline() {
     const events = [
         {date: 202212, importance: 3, title: 'Software Engineer', company: 'Pela', event: 'Stopped working at Pela', image: 'pela.png'},
         {date: 202107, importance: 2, title: 'Software Engineer', company: 'Pela', event: 'Promoted to Software Engineer', image: 'pela.png'},
-        {date: 202002, importance: 3, title: 'Jr. Developer', company: 'Pela', event: 'Started working at Pela', image: 'pela.png'},
-        {date: 202002, importance: 3, title: 'Intermediate Full Stack Developer', company: 'Cheeky Monkey Media', event: 'Stopped working at Cheeky Monkey Media', image: 'cheekymonkey.png'},
+        {date: 202002, importance: 3, title: 'Jr. Developer', company: 'Cheeky Monkey Media', event: 'Started working at Pela, Stopped working at Cheeky Monkey Media', image: 'cheekymonkey.png'},
         {date: 201910, importance: 3, title: 'Intermediate Full Stack Developer', company: 'Cheeky Monkey Media', event: 'Started working at Cheeky Monkey Media', image: 'cheekymonkey.png'},
         {date: 201908, importance: 3, title: 'Full Stack Software Developer', company: 'ChatterBlock', event: 'Stopped working at ChatterBlock', image: 'chatterblock.png'},
         {date: 201709, importance: 3, title: 'Full Stack Software Developer', company: 'ChatterBlock', event: 'Started working at ChatterBlock', image: 'chatterblock.png'},
@@ -58,24 +57,34 @@ function Timeline() {
                 events.map((event, index) => {
                     return (
                         <div key={index}>
-                            {
-                                index === 0 || (index > 0 && event.date !== events[index-1].date) ?
-                                <div className="grid grid-cols-3 max-w-[400px] m-auto">
-                                    <div className={`flex items-center ${event.importance !== 3 ? 'order-last' : ''}`}>
-                                        <p className={`caption text-teal-light my-0 ${event.importance === 3 ? 'ml-auto mr-2' : 'ml-2'}`}>
-                                            {months[event.date % 100 - 1]} {Math.floor(event.date*0.01)}
-                                        </p>
+                            
+                                <div className="grid grid-cols-5 max-w-[800px] m-auto h-4">
+                                    <div className={`col-span-2 flex items-center relative ${event.importance !== 3 ? 'order-last' : ''}`}>
+                                        <div className="absolute top-0 max-w-[300px]">
+                                            <p className={`caption--small text-teal-light my-0 ${event.importance === 3 ? 'ml-auto mr-2' : 'ml-2'}`}>
+                                                {event.event}
+                                            </p>
+                                            <p className={`caption text-teal-light my-0 ${event.importance === 3 ? 'ml-auto mr-2' : 'ml-2'}`}>
+                                                {months[event.date % 100 - 1]} {Math.floor(event.date*0.01)}
+                                            </p>
+                                            {
+                                                index === 0 || (index > 0 && event.image !== events[index-1].image) ?
+                                                <div className="w-10 h-10 flex items-center justify-center rounded-full m-auto bg-white border-solid border-teal-light border-4 p-4 mt-6">
+                                                    <img src={require(`../../static/${event.image}`)} className="max-h-full max-w-full" />
+                                                </div>
+                                                :
+                                                <></>
+                                            }
+                                        </div>
                                     </div>
                                     <div className="grid grid-cols-smallcenter">
                                         <div className={`w-full h-1 bg-teal-light m-auto ${event.importance !== 3 ? 'order-last' : ''}`}></div>
                                         <div className="w-1 h-full bg-teal-light m-auto"></div>
                                         <div className={`${event.importance !== 3 ? 'order-first' : ''}`}></div>
                                     </div>
-                                    <div className={`${event.importance !== 3 ? 'order-first' : ''}`}></div>
+                                    <div className={`col-span-2 ${event.importance !== 3 ? 'order-first' : ''}`}></div>
                                 </div>
-                                :
-                                <></>
-                            }
+                   
                             
                             {
                                 index < dates.length && dates[index].map((date, dateIndex) => {
