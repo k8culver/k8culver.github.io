@@ -5,7 +5,7 @@ import Timeline from "../components/Timeline/Timeline";
 import WordMap from "../components/WordMap/WordMap";
 import AboutMe from "../copy/AboutMe";
 import Resume from "../copy/Resume";
-import Reviews from "../copy/Reviews";
+import Reviews from "../components/Reviews/Reviews";
 
 function Home() {
     const words = [

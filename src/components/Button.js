@@ -3,7 +3,7 @@ function Button(props) {
     const { text, styleType, link, type, isDisabled } = props;
 
     return (
-        <div>
+        <div className="inline-block">
             {
                 link ?
                 <a href={ link } className={`button ${ styleType && "button--" + styleType}`} disabled={isDisabled} type={type}><span>{ text }</span></a>
