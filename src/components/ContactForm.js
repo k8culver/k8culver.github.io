@@ -5,14 +5,24 @@ import emailjs from '@emailjs/browser';
 
 
 function ContactForm() {
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [message, setMessage] = useState('');
     const [isSending, setIsSending] = useState(false);
     const [isSent, setIsSent] = useState(false);
     const [recaptchaValue, setRecaptchaValue] = useState('');
-
     const form = useRef();
+
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        message: '',
+      });
+
+    const handleInputChange = (e) => {
+        const { id, value } = e.target;
+        setFormData({
+          ...formData,
+          [id]: value,
+        });
+    };
 
     const sendEmail = (e) => {
         e.preventDefault(); // prevents the page from reloading when you hit “Send”
@@ -21,9 +31,7 @@ function ContactForm() {
         emailjs.sendForm('service_if6fu0n', 'template_f7hvmbq', form.current, 'gFgZ6_VB9nFHChdBY')
             .then((result) => {
                 // show the user a success message
-                setName('');
-                setEmail('');
-                setMessage('');
+                setFormData('','','');
                 setRecaptchaValue('');
                 setIsSending(false);
                 setIsSent(true);
@@ -32,12 +40,13 @@ function ContactForm() {
                 setIsSending(false);
                 setIsSent(false);
             });
+        
     };
 
     return (
-        <div className="px-8 pt-6 pb-8 mb-4 max-w-sm">
+        <div className="px-8 pt-6 pb-8 mb-4 max-w-sm relative">
             <h2 className="text-teal-light">Contact Me</h2>
-            <form ref={form} onSubmit={sendEmail}>
+            <form ref={form} onSubmit={sendEmail} className={`${isSent ? 'invisible' : ''}`}>
                 <div className="mb-4">
                     <label className="block text-teal-light mb-2" htmlFor="name">Name:</label>
                     <input
@@ -46,8 +55,8 @@ function ContactForm() {
                         id="name"
                         placeholder="Name"
                         name="form_name"
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
+                        value={formData.name}
+                        onChange={handleInputChange}
                         required
                     />
                 </div>
@@ -59,8 +68,8 @@ function ContactForm() {
                         id="email"
                         placeholder="Email"
                         name="form_email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
+                        value={formData.email}
+                        onChange={handleInputChange}
                         required
                     />
                 </div>
@@ -71,8 +80,8 @@ function ContactForm() {
                         id="message"
                         placeholder="Message"
                         name="message"
-                        value={message}
-                        onChange={(e) => setMessage(e.target.value)}
+                        value={formData.message}
+                        onChange={handleInputChange}
                         required
                     ></textarea>
                 </div>
@@ -81,10 +90,12 @@ function ContactForm() {
                     onChange={(value) => setRecaptchaValue(value)}
                 /> */}
                 <Button text={`${isSending ? 'Sending...' : 'Submit'}`} type="submit" disabled={isSending} />
-                {/* <input type="submit" value="Send" /> */}
 
                 {/* <Button text={`${isSending ? 'Sending...' : 'Submit'}`} type="submit" disabled={isSending || !recaptchaValue} /> */}
             </form>
+            <div className={`${isSent ? 'absolute top-1/2' : 'hidden'}`}>
+                <p className="text-white">Thanks for reaching out!</p>
+            </div>
         </div>
 
     );

@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Personal Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). It uses [EmailJS](https://www.emailjs.com/docs/) to send emails via a contact form.
 
 ## Available Scripts
 
