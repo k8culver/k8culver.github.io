@@ -4,7 +4,7 @@ function Review(props) {
     const { text, author, link, classes } = props;
 
     return (
-        <div className={`flex items-center justify-center rounded-full bg-teal border-solid border-teal-light border-16 p-10 sm:p-16 mt-10 ${classes}`}>
+        <div className={`flex items-center justify-center rounded-full bg-teal border-solid border-white border-16 p-10 sm:p-16 mt-10 ${classes}`}>
             <div>
                 <p className="text-white">{text}</p>
                 <div className="sm:flex justify-between text-center">

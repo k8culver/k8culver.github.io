@@ -1,12 +1,34 @@
+import { useState, useEffect } from "react";
+
+
 function AboutMe() {
+    const fullTitle = 'About Me';
+    const fullText = `I am a software engineer with over 5 years of professional experience. 
+    I love thinking outside the box, problem solving, and puzzles. 
+    I'm passionate about creating exceptional customer journeys, designing intuitive interfaces, and crafting clean and readable code. 
+    When it comes to my work, I'm highly engaged, eager to contribute, learn, and develop my skills further.`
+
+    const [textStart, setTextStart] = useState('');
+    const [textEnd, setTextEnd] = useState(fullText);
+    const [textIndex, setTextIndex] = useState(0);
+
+    useEffect(() => {
+        if (textIndex < fullText.length) {
+            const timeout = setTimeout(() => {
+                setTextStart(prevText => prevText + fullText[textIndex]);
+                setTextEnd(prevText => prevText.substring(1));
+                setTextIndex(prevIndex => prevIndex + 1);
+            }, 60);
+      
+            return () => clearTimeout(timeout);
+        }
+    }, [textIndex, fullText]);
+
+
     return (
-        <div className="px-4">
-            <h2>About Me</h2>
-            <p>I am a software engineer with over 5 years of professional experience. 
-                I love thinking outside the box, problem solving, and puzzles. 
-                I'm passionate about creating exceptional customer journeys, designing intuitive interfaces, and crafting clean and readable code. 
-                When it comes to my work, I'm highly engaged, eager to contribute, learn, and develop my skills further.
-            </p>
+        <div className="px-4 max-w-3xl m-auto">
+            <h1>{fullTitle}</h1>
+            <p><span>{textStart}</span><span className="text-white">{textEnd}</span></p>
         </div>
     );
 }

@@ -3,7 +3,7 @@ import Review from "./Review";
 
 function Reviews() {
     return (
-        <>
+        <div className="max-w-3xl m-auto">
             <h2>Reviews of Kate</h2>
             <div className="grid grid-flow-row-dense grid-flow-col auto-cols-auto">
                 <Review
@@ -26,7 +26,7 @@ function Reviews() {
                     author="Blake, former colleague"
                 />
             </div>
-        </>
+        </div>
     );
 }
 

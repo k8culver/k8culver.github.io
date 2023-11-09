@@ -5,12 +5,11 @@ module.exports = {
     ],
     theme: {
         colors: {
-            'teal': '#3C4D58',
-            'teal-light': '#A4C1C6',
-            'teal-hover': '#BFC2BC',
-            'purple': '#6e4b6c',
-            'purple-hover': '#DDD2CF',
-            'white': '#f9f5e8',
+            'teal': '#183b50',
+            'teal-light': '#8accdc',
+            'purple': '#6e2151',
+            'purple-hover': '#f7e5f0',
+            'white': '#e5f3f7',
             'black': '#2f2b2a',
         },
         fontFamily: {

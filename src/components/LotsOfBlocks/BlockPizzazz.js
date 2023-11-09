@@ -20,19 +20,19 @@ function BlockPizzazz(props) {
                     randClasses = `bg-${ color }`; // color square
                     break;
                 case 1:
-                    randClasses = 'bg-white'; // white square
+                    randClasses = 'bg-teal-light'; // teal-light square
                     break;
                 case 2:
-                    randClasses = `box-border border-4 border-solid border-${ color } bg-white`; // color border, white square
+                    randClasses = `box-border border-4 border-solid border-${ color } bg-teal-light`; // color border, teal-light square
                     break;
                 case 3:
-                    randClasses = `box-border border-4 border-solid border-white bg-${ color }`; // white border, color square
+                    randClasses = `box-border border-4 border-solid border-teal-light bg-${ color }`; // teal-light border, color square
                     break;
                 case 4:
-                    randClasses = `box-border border-8 border-solid border-${ color } bg-white`; // thick color border, white square
+                    randClasses = `box-border border-8 border-solid border-${ color } bg-teal-light`; // thick color border, teal-light square
                     break;
                 case 5:
-                    randClasses = `box-border border-8 border-solid border-white bg-${ color }`; // thick white border, color square
+                    randClasses = `box-border border-8 border-solid border-teal-light bg-${ color }`; // thick teal-light border, color square
                     break;
                 default:
                     randClasses = `bg-${ color }`; // color square

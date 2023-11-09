@@ -1,5 +1,5 @@
 function Word(props) {
-    const { word, isFlipped, handleFlip, id } = props; // prop:word is an object with a word, a value, a description, and classes
+    const { word, isFlipped, handleFlip, exitFlip, id } = props; // prop:word is an object with a word, a value, a description, and classes
 
     const calculateFontSize = (value) => {
         const minSize = 14;
@@ -14,6 +14,7 @@ function Word(props) {
         <div className="relative">
             <div className={`
                 ${isFlipped ? 'absolute' : 'hidden'}
+                pointer-events-none
                 z-10
                 bg-teal
                 p-4
@@ -28,7 +29,12 @@ function Word(props) {
             >
                 <p className="m-0 text-teal-light font-medium">{ word.description }</p>
             </div>
-            <button style={{ fontSize: calculateFontSize(word.value), pointerEvents: isFlipped ? 'none' : 'auto' }} className={`unstyled ${isFlipped ? 'disabled' : ''}`} onClick={(e) => handleFlip(e, id)}>
+            <button
+                style={{ fontSize: calculateFontSize(word.value) }}
+                className={`unstyled ${isFlipped ? 'disabled' : ''}`}
+                onMouseEnter={(e) => handleFlip(e, id)}
+                onMouseLeave={(e) => exitFlip(e, id)}
+            >
                 <span className={`${word.classes} font-semibold`}>
                     {word.text}
                 </span>
