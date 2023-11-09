@@ -5,12 +5,15 @@ module.exports = {
     ],
     theme: {
         colors: {
-            'teal': '#183b50',
-            'teal-light': '#8accdc',
-            'purple': '#6e2151',
-            'purple-hover': '#f7e5f0',
-            'white': '#e5f3f7',
-            'black': '#2f2b2a',
+            'teal': '#2A798B',
+            'teal-dark': '#2D5159',
+            'teal-darker': '#133840',
+            'teal-light': '#AAE5F2',
+            'purple': '#8C2A50',
+            'purple-hover': '#eec7d6',
+            'gold': '#b97438',
+            'white': '#f4fafc',
+            'black': '#233437',
         },
         fontFamily: {
             sans: ['Montserrat', 'sans-serif'],
@@ -31,6 +34,9 @@ module.exports = {
             borderWidth: {
                 '12': '12px',
                 '16': '16px',
+            },
+            boxShadow: {
+                'border': '0px 0px 0px 2px black inset',
             }
         },
     },

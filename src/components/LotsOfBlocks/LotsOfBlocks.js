@@ -1,7 +1,7 @@
 import BlockPizzazz from "./BlockPizzazz";
 
 function LotsOfBlocks(props) {
-    const { components, color } = props; // for tailwind generator: color: bg-teal border-teal bg-black border-black
+    const { components, color } = props; // for tailwind generator: color: bg-teal-dark border-teal-dark  bg-teal border-teal bg-black border-black
     return (
         <div className="mt-4">
             <div className="flex items-end">

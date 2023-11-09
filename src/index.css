@@ -5,12 +5,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-    --teal: #183b50;
-    --teal-light: #8accdc;
-    --purple: #6e2151;
-    --purple-hover: #f7e5f0;
-    --white: #e5f3f7;
-    --black: #2f2b2a;
+    --teal: #2A798B;
+    --teal-dark: #2D5159;
+    --teal-darker: #133840;
+    --teal-light: #AAE5F2;
+    --purple: #8C2A50;
+    --purple-hover: #eec7d6;
+    --gold: #b97438;
+    --white: #f4fafc;
+    --black: #233437;
     --transition-slow: 0.5s linear;
     --transition-fast: 0.2s linear;
 }
@@ -23,7 +26,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Bitter', sans-serif;
     font-weight: 400;
-    color: var(--teal);
+    color: var(--teal-darker);
     margin-top: 0;
 }
 
@@ -31,7 +34,7 @@ p, ul, a:not(.button), label, ::placeholder {
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
     font-weight: 400;
-    color: var(--teal);
+    color: var(--teal-dark);
     letter-spacing: 0.025rem;
 }
 

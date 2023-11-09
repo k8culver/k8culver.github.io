@@ -28,7 +28,7 @@ function AboutMe() {
     return (
         <div className="px-4 max-w-3xl m-auto">
             <h1>{fullTitle}</h1>
-            <p><span>{textStart}</span><span className="text-white">{textEnd}</span></p>
+            <p><span>{textStart}</span><span className="text-teal-light">{textEnd}</span></p>
         </div>
     );
 }

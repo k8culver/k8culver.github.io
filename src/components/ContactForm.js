@@ -48,9 +48,9 @@ function ContactForm() {
             <h2 className="text-teal-light">Contact Me</h2>
             <form ref={form} onSubmit={sendEmail} className={`${isSent ? 'invisible' : ''}`}>
                 <div className="mb-4">
-                    <label className="block text-teal-light mb-2" htmlFor="name">Name:</label>
+                    <label className="block text-white mb-2" htmlFor="name">Name:</label>
                     <input
-                        className="appearance-none border border-teal-light border-solid rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        className="appearance-none border border-none rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-border focus:shadow-gold"
                         type="text"
                         id="name"
                         placeholder="Name"
@@ -61,9 +61,9 @@ function ContactForm() {
                     />
                 </div>
                 <div className="mb-4">
-                    <label htmlFor="email" className="block text-teal-light mb-2">Email:</label>
+                    <label htmlFor="email" className="block text-white mb-2">Email:</label>
                     <input
-                        className="appearance-none border border-teal-light border-solid rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        className="appearance-none border border-none rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-border focus:shadow-gold"
                         type="email"
                         id="email"
                         placeholder="Email"
@@ -74,9 +74,9 @@ function ContactForm() {
                     />
                 </div>
                 <div className="mb-4">
-                    <label htmlFor="message" className="block text-teal-light mb-2">Message:</label>
+                    <label htmlFor="message" className="block text-white mb-2">Message:</label>
                     <textarea
-                    className="appearance-none border border-teal-light border-solid rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-24"
+                    className="appearance-none border border-none rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-border focus:shadow-gold h-24"
                         id="message"
                         placeholder="Message"
                         name="message"

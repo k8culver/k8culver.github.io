@@ -2,7 +2,7 @@ import Pages from './Pages';
 
 function App() {
   return (
-    <div className="bg-teal-light">
+    <div className="bg-white">
         <Pages />
     </div>
   );
