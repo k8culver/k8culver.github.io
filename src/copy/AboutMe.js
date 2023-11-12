@@ -26,9 +26,9 @@ function AboutMe() {
 
 
     return (
-        <div className="px-4 max-w-3xl m-auto">
-            <h1>{fullTitle}</h1>
-            <p><span>{textStart}</span><span className="text-teal-light">{textEnd}</span></p>
+        <div className="px-4 max-w-3xl m-auto mt-20">
+            <h1 className="text-teal">{fullTitle}</h1>
+            <p className="text-white"><span>{textStart}</span><span className="text-teal-dark">{textEnd}</span></p>
         </div>
     );
 }

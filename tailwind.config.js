@@ -37,6 +37,7 @@ module.exports = {
             },
             boxShadow: {
                 'border': '0px 0px 0px 2px black inset',
+                'border-thick': '0px 0px 0px 4px black inset',
             }
         },
     },

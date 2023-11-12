@@ -11,7 +11,7 @@ function BlockPizzazz(props) {
     for (let i = 0; i < blockCount; i++) {
         const blockCol = [];
         for (let j = 0; j < 2; j++) {
-            const allowed = j === 0 ? [0, 2, 4] : [0, 1, 2, 3, 4, 5];
+            const allowed = j === 0 ? [0, 2, 4, 6, 7] : [0, 1, 2, 3, 4, 5, 6, 7, 8];
             const rand = Math.floor(Math.random() * allowed.length);
             
             let randClasses = '';
@@ -20,19 +20,28 @@ function BlockPizzazz(props) {
                     randClasses = `bg-${ color }`; // color square
                     break;
                 case 1:
-                    randClasses = 'bg-white'; // white square
+                    randClasses = 'bg-teal-darker'; // teal-darker square
                     break;
                 case 2:
-                    randClasses = `box-border border-4 border-solid border-${ color } bg-white`; // color border, white square
+                    randClasses = `box-border border-4 border-solid border-${ color } bg-teal-darker`; // color border, teal-darker square
                     break;
                 case 3:
-                    randClasses = `box-border border-4 border-solid border-white bg-${ color }`; // white border, color square
+                    randClasses = `box-border border-4 border-solid border-teal-darker bg-${ color }`; // teal-darker border, color square
                     break;
                 case 4:
-                    randClasses = `box-border border-8 border-solid border-${ color } bg-white`; // thick color border, white square
+                    randClasses = `box-border border-8 border-solid border-${ color } bg-teal-darker`; // thick color border, teal-darker square
                     break;
                 case 5:
-                    randClasses = `box-border border-8 border-solid border-white bg-${ color }`; // thick white border, color square
+                    randClasses = `box-border border-8 border-solid border-teal-darker bg-${ color }`; // thick teal-darker border, color square
+                    break;
+                case 6:
+                    randClasses = `bg-${ color } box-border border-4 border-solid border-gold`; // color square, gold border
+                    break;
+                case 7:
+                    randClasses = `box-border border-4 border-solid border-${ color } bg-teal-darker shadow-border shadow-gold`; // color border, gold border, teal-darker square
+                    break;
+                case 8:
+                    randClasses = `box-border border-8 border-solid border-teal-darker bg-${ color } shadow-border-thick shadow-gold`; // thick teal-darker border, thick gold border, color square
                     break;
                 default:
                     randClasses = `bg-${ color }`; // color square

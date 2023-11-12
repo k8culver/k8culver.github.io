@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
-import photo from '../../static/IMG_1551.PNG';
+import photo from '../../static/IMG_1553.PNG';
 import photoGrey from '../../static/IMG_1552.PNG';
 
 // Addapted from solution found here: https://stackoverflow.com/questions/46292350/make-ball-follow-mouse-on-canvas
@@ -22,6 +22,7 @@ function Canvas() {
 
         const typeOut = (i, text, x, y) => {
             setTimeout(() => {
+                ctx.fillStyle = '#f4fafc';
                 ctx.fillText(text[i], x, y);
                 if (i < text.length - 1) {
                     typeOut(i + 1, text, x + ctx.measureText(text[i]).width, y);
@@ -34,6 +35,7 @@ function Canvas() {
             ctx.font = '32px Bitter';
             const text = 'Hello, my name is Kate.';
             if(isInstant) {
+                ctx.fillStyle = '#f4fafc';
                 ctx.fillText('Hello, my name is Kate.', x, y);
             } else {
                 typeOut(0, text, x, y);
