@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
-import photo from '../../static/test-photo.jpeg';
-import photoGrey from '../../static/test-photo-grey.png';
+import photo from '../../static/IMG_1551.PNG';
+import photoGrey from '../../static/IMG_1552.PNG';
 
 // Addapted from solution found here: https://stackoverflow.com/questions/46292350/make-ball-follow-mouse-on-canvas
 function Canvas() {
@@ -15,8 +15,8 @@ function Canvas() {
     
         imageGrey.onload = () => {
             canvas.width = window.innerWidth;
-            canvas.height = imageGrey.height;
-            ctx.drawImage(imageGrey, 0, 0);
+            canvas.height = (imageGrey.height/imageGrey.width)*window.innerWidth;
+            ctx.drawImage(imageGrey, 0, 0, canvas.width, canvas.height);
             type(canvas.width/8, canvas.height/4, false);
         };
 
@@ -46,7 +46,7 @@ function Canvas() {
             ctx.arc(x, y, radius, 0, 2 * Math.PI);
             ctx.clip();
             ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.drawImage(image, 0, 0);
+            ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
             ctx.restore();
         };
         
@@ -60,7 +60,7 @@ function Canvas() {
     
         const handleMouseOut = () => {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.drawImage(imageGrey, 0, 0);
+            ctx.drawImage(imageGrey, 0, 0, canvas.width, canvas.height);
             type(canvas.width/8, canvas.height/4, true);
         };
     

@@ -12,23 +12,28 @@ function Word(props) {
 
     return (
         <div className="relative">
-            <div className={`
-                ${isFlipped ? 'absolute' : 'hidden'}
-                pointer-events-none
-                z-10
-                bg-teal
-                p-4
-                rounded
-                after:content-[''] 
-                after:top-full
-                after:absolute after:left-1/3
-                after:w-0 after:h-0 
-                after:border-solid after-border-transparent after:border-8 after:border-b-0 after:border-t-teal
-                `}
-                style={{ bottom: (calculateFontSize(word.value) + 14)}}
-            >
-                <p className="m-0 text-teal-light font-medium">{ word.description }</p>
+            <div className={``}>
+                <div className={`
+                    ${isFlipped ? 'absolute' : 'hidden'}
+                    z-10
+                    fade-in
+                    ${isFlipped ? 'fade-in-visible' : ''}
+                    pointer-events-none
+                    bg-teal
+                    p-4
+                    rounded
+                    after:content-[''] 
+                    after:top-full
+                    after:absolute after:left-1/3
+                    after:w-0 after:h-0 
+                    after:border-solid after-border-transparent after:border-8 after:border-b-0 after:border-t-teal
+                    `}
+                    // style={{ bottom: (calculateFontSize(word.value) + 14)}}
+                >
+                    <p className="m-0 text-teal-light font-medium pointer-events-none">{ word.description }</p>
+                </div>
             </div>
+            
             <button
                 style={{ fontSize: calculateFontSize(word.value) }}
                 className={`unstyled ${isFlipped ? 'disabled' : ''}`}
