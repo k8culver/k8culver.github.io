@@ -65,10 +65,8 @@ function Home() {
             </div>
             <WordMap words={words} />
             <LotsOfBlocks components={<><Timeline events={events} /></>} color="teal-dark" />
-            <div className="container m-auto">
-                <Reviews />
-            </div>
-            {/* <LotsOfBlocks components={<ContactForm />} color="teal-dark" /> */}
+            <Reviews />
+            <LotsOfBlocks components={<ContactForm />} color="teal-dark" />
             {/* <InstagramImageFeed token={process.env.INSTAGRAM_TOKEN} limit={12}/> */}
             <p className="caption--small text-teal mb-0 pb-4 px-4">Conceptualized, designed, and developed by Kate Culver © 2023</p>
         </>

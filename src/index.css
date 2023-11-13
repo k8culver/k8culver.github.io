@@ -12,6 +12,7 @@
     --purple: #8C2A50;
     --purple-hover: #eec7d6;
     --gold: #b97438;
+    --gold-hover: #eed9c7;
     --white: #f4fafc;
     --black: #233437;
     --transition-slow: 0.5s linear;
@@ -116,6 +117,11 @@ button:not(.unstyled),
     color: var(--purple);
 }
 
+.button.button--outline--gold {
+    background-image: linear-gradient(to left, var(--white) 0%, var(--white) 45%, var(--gold) 60%, var(--gold) 100%);
+    color: var(--gold);
+}
+
 button:not(.unstyled) span,
 .button:not(.unstyled) span {
     background-image: linear-gradient(to left, var(--teal) 0%, var(--teal) 45%, var(--teal-light) 60%, var(--teal-light) 100%);
@@ -134,13 +140,17 @@ button:not(.unstyled) span,
     background-image: linear-gradient(to left, var(--white) 0%, var(--white) 45%, var(--purple-hover) 60%, var(--purple-hover) 100%);
 }
 
+.button.button--outline--gold span {
+    background-image: linear-gradient(to left, var(--white) 0%, var(--white) 45%, var(--gold-hover) 60%, var(--gold-hover) 100%);
+}
+
 button:not(.unstyled):hover,
 .button:not(.unstyled):hover {
     background-position: 100% 100%;
 }
 
-button:not(.button--outline, .button--outline--purple, .unstyled):hover,
-.button:not(.button--outline, .button--outline--purple, .unstyled):hover {
+button:not(.button--outline, .button--outline--purple, .button--outline--gold, .unstyled):hover,
+.button:not(.button--outline, .button--outline--purple, .button--outline--gold, .unstyled):hover {
     color: var(--teal);
 }
 

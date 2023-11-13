@@ -15,9 +15,9 @@ function LotsOfBlocks(props) {
                     </div>
                 </div>
             </div>
-            {/* <div className="flex items-start flex-row-reverse">
+            <div className="flex items-start flex-row-reverse">
                 <BlockPizzazz color={color} isBottom />
-            </div> */}
+            </div>
         </div>
     );
 }

@@ -39,6 +39,7 @@ module.exports = {
                 'border': '0px 0px 0px 2px black inset',
                 'border-thick': '0px 0px 0px 4px black inset',
                 'border-outer': '0px 0px 0px 2px black',
+                'inner-top-bottom': '0px 20px 20px black inset, 0px -20px 20px black inset',
             }
         },
     },

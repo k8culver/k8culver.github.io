@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 import Button from './Button';
 import emailjs from '@emailjs/browser';
+import iris from '../static/IMG_1557.PNG';
 
 
 function ContactForm() {
@@ -44,60 +45,64 @@ function ContactForm() {
     };
 
     return (
-        <div className="px-8 pt-6 pb-8 mb-4 max-w-sm relative">
-            <h2 className="text-teal-light">Contact Me</h2>
-            <form ref={form} onSubmit={sendEmail} className={`${isSent ? 'invisible' : ''}`}>
-                <div className="mb-4">
-                    <label className="block text-white mb-2" htmlFor="name">Name:</label>
-                    <input
-                        className="appearance-none border border-none rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-border focus:shadow-gold"
-                        type="text"
-                        id="name"
-                        placeholder="Name"
-                        name="form_name"
-                        value={formData.name}
-                        onChange={handleInputChange}
-                        required
-                    />
-                </div>
-                <div className="mb-4">
-                    <label htmlFor="email" className="block text-white mb-2">Email:</label>
-                    <input
-                        className="appearance-none border border-none rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-border focus:shadow-gold"
-                        type="email"
-                        id="email"
-                        placeholder="Email"
-                        name="form_email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        required
-                    />
-                </div>
-                <div className="mb-4">
-                    <label htmlFor="message" className="block text-white mb-2">Message:</label>
-                    <textarea
-                    className="appearance-none border border-none rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-border focus:shadow-gold h-24"
-                        id="message"
-                        placeholder="Message"
-                        name="message"
-                        value={formData.message}
-                        onChange={handleInputChange}
-                        required
-                    ></textarea>
-                </div>
-                {/* <ReCAPTCHA
-                    sitekey="your_recaptcha_site_key"
-                    onChange={(value) => setRecaptchaValue(value)}
-                /> */}
-                <Button text={`${isSending ? 'Sending...' : 'Submit'}`} type="submit" disabled={isSending} />
+        <div className="grid grid-cols-2 mt-20">
+            <div className="px-8 pt-6 pb-8 mb-4 max-w-sm relative">
+                <h2 className="text-teal-light">Contact Me</h2>
+                <form ref={form} onSubmit={sendEmail} className={`${isSent ? 'invisible' : ''}`}>
+                    <div className="mb-4">
+                        <label className="block text-white mb-2" htmlFor="name">Name:</label>
+                        <input
+                            className="appearance-none border border-none rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-border focus:shadow-gold"
+                            type="text"
+                            id="name"
+                            placeholder="Name"
+                            name="form_name"
+                            value={formData.name}
+                            onChange={handleInputChange}
+                            required
+                        />
+                    </div>
+                    <div className="mb-4">
+                        <label htmlFor="email" className="block text-white mb-2">Email:</label>
+                        <input
+                            className="appearance-none border border-none rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-border focus:shadow-gold"
+                            type="email"
+                            id="email"
+                            placeholder="Email"
+                            name="form_email"
+                            value={formData.email}
+                            onChange={handleInputChange}
+                            required
+                        />
+                    </div>
+                    <div className="mb-4">
+                        <label htmlFor="message" className="block text-white mb-2">Message:</label>
+                        <textarea
+                        className="appearance-none border border-none rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-border focus:shadow-gold h-24"
+                            id="message"
+                            placeholder="Message"
+                            name="message"
+                            value={formData.message}
+                            onChange={handleInputChange}
+                            required
+                        ></textarea>
+                    </div>
+                    {/* <ReCAPTCHA
+                        sitekey="your_recaptcha_site_key"
+                        onChange={(value) => setRecaptchaValue(value)}
+                    /> */}
+                    <Button text={`${isSending ? 'Sending...' : 'Submit'}`} type="submit" disabled={isSending} />
 
-                {/* <Button text={`${isSending ? 'Sending...' : 'Submit'}`} type="submit" disabled={isSending || !recaptchaValue} /> */}
-            </form>
-            <div className={`${isSent ? 'absolute top-1/2' : 'hidden'}`}>
-                <p className="text-white">Thanks for reaching out!</p>
+                    {/* <Button text={`${isSending ? 'Sending...' : 'Submit'}`} type="submit" disabled={isSending || !recaptchaValue} /> */}
+                </form>
+                <div className={`${isSent ? 'absolute top-1/2' : 'hidden'}`}>
+                    <p className="text-white">Thanks for reaching out!</p>
+                </div>
+            </div>
+            <div className='pl-20'>
+                <img src={iris} alt="Iris" className='max-w-xs' />
             </div>
         </div>
-
     );
 }
 
