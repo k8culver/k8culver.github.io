@@ -4,34 +4,33 @@ import LotsOfBlocks from "../components/LotsOfBlocks/LotsOfBlocks";
 import Timeline from "../components/Timeline/Timeline";
 import WordMap from "../components/WordMap/WordMap";
 import AboutMe from "../copy/AboutMe";
-import Resume from "../copy/Resume";
 import Reviews from "../components/Reviews/Reviews";
 import InstagramImageFeed from "../components/ImageFeed/InstagramImageFeed";
 
 function Home() {
     const words = [
-        { text: 'Python', value: 4, classes: 'text-purple', description: '2 years professional, university training' },
-        { text: 'React', value: 5, classes: 'text-teal-dark', description: '3 years professional' },
+        { text: 'Python', value: 4, classes: 'text-teal-light', description: '2 years professional, university training' },
+        { text: 'React', value: 5, classes: 'text-teal', description: '3 years professional' },
         { text: 'AWS', value: 2, classes: 'text-gold', description: '3 years professional' },
-        { text: 'CSS', value: 5, classes: 'text-teal-dark', description: '5 years professional' },
-        { text: 'TypeScript', value: 3, classes: 'text-teal-dark', description: '2.5 years professional' },
-        { text: 'Node.js', value: 2, classes: 'text-purple', description: '2 years professional' },
+        { text: 'CSS', value: 5, classes: 'text-teal', description: '5 years professional' },
+        { text: 'TypeScript', value: 3, classes: 'text-teal', description: '2.5 years professional' },
+        { text: 'Node.js', value: 2, classes: 'text-teal-light', description: '2 years professional' },
         { text: 'Git', value: 4, classes: 'text-gold', description: '5 years professional' },
-        { text: 'GraphQL', value: 3, classes: 'text-purple', description: '2.5 years professional' },
-        { text: 'Java', value: 2, classes: 'text-purple', description: 'university training' },
-        { text: 'MongoDB', value: 1, classes: 'text-purple', description: '2 years professional' },
+        { text: 'GraphQL', value: 3, classes: 'text-teal-light', description: '2.5 years professional' },
+        { text: 'Java', value: 2, classes: 'text-teal-light', description: 'university training' },
+        { text: 'MongoDB', value: 1, classes: 'text-teal-light', description: '2 years professional' },
         { text: 'Elasticsearch', value: 2, classes: 'text-gold', description: '2.5 years professional' },
-        { text: 'SQL', value: 2, classes: 'text-purple', description: '2 years professional, university training' },
-        { text: 'JavaScript', value: 5, classes: 'text-teal-dark', description: '5 years professional' },
+        { text: 'SQL', value: 2, classes: 'text-teal-light', description: '2 years professional, university training' },
+        { text: 'JavaScript', value: 5, classes: 'text-teal', description: '5 years professional' },
         { text: 'Jest', value: 2, classes: 'text-gold', description: '2 years professional' },
-        { text: 'HTML', value: 5, classes: 'text-teal-dark', description: '5 years professional' },
-        { text: 'PostgreSQL', value: 1, classes: 'text-purple', description: '2 years professional' },
+        { text: 'HTML', value: 5, classes: 'text-teal', description: '5 years professional' },
+        { text: 'PostgreSQL', value: 1, classes: 'text-teal-light', description: '2 years professional' },
         { text: 'Agile', value: 4, classes: 'text-gold', description: '5 years professional' },
-        { text: 'PHP', value: 1, classes: 'text-purple', description: '0.5 years professional' },
-        { text: 'Assembly', value: 2, classes: 'text-purple', description: 'university training' },
+        { text: 'PHP', value: 1, classes: 'text-teal-light', description: '0.5 years professional' },
+        { text: 'Assembly', value: 2, classes: 'text-teal-light', description: 'university training' },
         { text: 'Gatsby', value: 3, classes: 'text-gold', description: '2.5 years professional' },
-        { text: 'C', value: 2, classes: 'text-purple', description: 'university training' },
-        { text: 'Django', value: 4, classes: 'text-teal-dark', description: '2 years professional' },
+        { text: 'C', value: 2, classes: 'text-teal-light', description: 'university training' },
+        { text: 'Django', value: 4, classes: 'text-teal', description: '2 years professional' },
         { text: 'Figma', value: 3, classes: 'text-gold', description: '2 years professional' },
         { text: 'Insomnia', value: 3, classes: 'text-gold', description: '3 years professional' },
       ];
@@ -69,7 +68,7 @@ function Home() {
             <div className="container m-auto">
                 <Reviews />
             </div>
-            <LotsOfBlocks components={<ContactForm />} color="teal" />
+            {/* <LotsOfBlocks components={<ContactForm />} color="teal-dark" /> */}
             {/* <InstagramImageFeed token={process.env.INSTAGRAM_TOKEN} limit={12}/> */}
             <p className="caption--small text-teal mb-0 pb-4 px-4">Conceptualized, designed, and developed by Kate Culver © 2023</p>
         </>

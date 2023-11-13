@@ -171,16 +171,3 @@ button:not(.unstyled):hover span,
      bottom: calc(100% + 8px);
    }
 }
-
-.golden {
-    background-image: linear-gradient(
-        to right,
-        #f6f2c0 0,
-        #f6e27a 15%,
-        var(--gold)30%,
-        var(--gold)70%,
-        #412814 100%
-        );
-    color: transparent;
-    -webkit-background-clip: text;
-}
