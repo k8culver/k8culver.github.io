@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.e9a99e55.css",
-    "main.js": "/static/js/main.7a39bd91.js",
+    "main.js": "/static/js/main.59924bfc.js",
     "static/js/787.5809834d.chunk.js": "/static/js/787.5809834d.chunk.js",
     "static/media/IMG_1553.PNG": "/static/media/IMG_1553.b2db57bb3a69279a4264.PNG",
     "static/media/IMG_1557.PNG": "/static/media/IMG_1557.48eec45862c9d6b3775a.PNG",
@@ -14,11 +14,11 @@
     "static/media/uvic.png": "/static/media/uvic.e77f561f0e18e76408b3.png",
     "index.html": "/index.html",
     "main.e9a99e55.css.map": "/static/css/main.e9a99e55.css.map",
-    "main.7a39bd91.js.map": "/static/js/main.7a39bd91.js.map",
+    "main.59924bfc.js.map": "/static/js/main.59924bfc.js.map",
     "787.5809834d.chunk.js.map": "/static/js/787.5809834d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e9a99e55.css",
-    "static/js/main.7a39bd91.js"
+    "static/js/main.59924bfc.js"
   ]
 }
