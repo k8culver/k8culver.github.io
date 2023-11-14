@@ -10,8 +10,12 @@ function Canvas() {
     useEffect(() => {
         const canvas = canvasRef.current;
         const ctx = canvas.getContext('2d');
-        const image = imageRef.current;
-        const imageGrey = imageRefGrey.current;
+        // const image = imageRef.current;
+        // const imageGrey = imageRefGrey.current;
+        const image = new Image();
+        const imageGrey = new Image();
+        image.src = photo;
+        imageGrey.src = photoGrey;
     
         imageGrey.onload = () => {
             canvas.width = window.innerWidth;
@@ -79,8 +83,8 @@ function Canvas() {
     return (
         <div>
             <canvas ref={canvasRef} className='transition' />
-            <img ref={imageRef} src={photo} alt="Hero Doodle" className='hidden' />
-            <img ref={imageRefGrey} src={photoGrey} alt="Hero Doodle Grey" className='hidden' />
+            {/* <img ref={imageRef} src={photo} alt="Hero Doodle" className='hidden' /> */}
+            {/* <img ref={imageRefGrey} src={photoGrey} alt="Hero Doodle Grey" className='hidden' /> */}
         </div>
     );
 }
