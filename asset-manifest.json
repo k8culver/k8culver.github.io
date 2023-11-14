@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/personal-website/static/css/main.e9a99e55.css",
+    "main.js": "/personal-website/static/js/main.0d761a39.js",
+    "static/js/787.5809834d.chunk.js": "/personal-website/static/js/787.5809834d.chunk.js",
+    "static/media/IMG_1553.PNG": "/personal-website/static/media/IMG_1553.b2db57bb3a69279a4264.PNG",
+    "static/media/IMG_1557.PNG": "/personal-website/static/media/IMG_1557.48eec45862c9d6b3775a.PNG",
+    "static/media/background.jpg": "/personal-website/static/media/background.7cb4e120aab1b86849b3.jpg",
+    "static/media/test-photo-grey.png": "/personal-website/static/media/test-photo-grey.ec68ab900902da914bc6.png",
+    "static/media/IMG_1552.PNG": "/personal-website/static/media/IMG_1552.bf1ced4c6f4b726c674e.PNG",
+    "static/media/test-photo.jpeg": "/personal-website/static/media/test-photo.cd3d9453df8592bcc5a4.jpeg",
+    "static/media/cheekymonkey.png": "/personal-website/static/media/cheekymonkey.8007b58de5e8dcb8fae5.png",
+    "static/media/pela.png": "/personal-website/static/media/pela.5e97db52e5d3ef0a3311.png",
+    "static/media/chatterblock.png": "/personal-website/static/media/chatterblock.2a92a377d15d043ebc95.png",
+    "static/media/uvic.png": "/personal-website/static/media/uvic.e77f561f0e18e76408b3.png",
+    "index.html": "/personal-website/index.html",
+    "main.e9a99e55.css.map": "/personal-website/static/css/main.e9a99e55.css.map",
+    "main.0d761a39.js.map": "/personal-website/static/js/main.0d761a39.js.map",
+    "787.5809834d.chunk.js.map": "/personal-website/static/js/787.5809834d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e9a99e55.css",
+    "static/js/main.0d761a39.js"
+  ]
+}
