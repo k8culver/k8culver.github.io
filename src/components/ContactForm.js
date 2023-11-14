@@ -94,6 +94,8 @@ function ContactForm() {
                         sitekey="your_recaptcha_site_key"
                         onChange={(value) => setRecaptchaValue(value)}
                     /> */}
+                    <div className="g-recaptcha" data-sitekey="6Leumg8pAAAAAMJJLJyDk7PydWxRxDygdenxcefq"></div>
+                    <br/>
                     <Button text={`${isSending ? 'Sending...' : 'Submit'}`} type="submit" disabled={isSending} styleType="outline" />
 
                     {/* <Button text={`${isSending ? 'Sending...' : 'Submit'}`} type="submit" disabled={isSending || !recaptchaValue} /> */}
