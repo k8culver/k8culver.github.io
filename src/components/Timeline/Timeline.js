@@ -32,10 +32,10 @@ function Timeline(props) {
             </div>
             <div className="sm:flex sm:justify-center mt-20 sm:mt-32 text-center">
                 <div className="mb-4 sm:mb-0 sm:mr-4 sm:inline-block">
-                    <Button text="Check out my LinkedIn" styleType="outline--gold" link="https://www.linkedin.com/in/kate-culver-333388143" />
+                    <Button text="Check out my LinkedIn" styleType="outline--gold" link="https://www.linkedin.com/in/kate-culver-333388143" newTab={true} />
                 </div>
                 <div className="sm:inline-block">
-                    <Button text="Download my resume" styleType="outline--gold" />
+                    <Button text="Download my resume" styleType="outline--gold" link="/personal-website/static/media/Resume.366511a576ec46e40ad5.pdf" newTab={true} />
                 </div>
             </div>
         </div>
