@@ -10,7 +10,7 @@ function LotsOfBlocks(props) {
             </div>
             <div className={`bg-${ color }`}>
                 <div className="container m-auto py-10">
-                    <div className="md:-mt-40">
+                    <div className="md:-mt-20 lg:-mt-40">
                         { components }
                     </div>
                 </div>

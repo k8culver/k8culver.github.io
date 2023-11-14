@@ -20,17 +20,21 @@ function Word(props) {
                     ${isFlipped ? 'fade-in-visible' : ''}
                     pointer-events-none
                     bg-teal
+                    border-solid
+                    border-gold
+                    border-2
                     p-4
                     rounded
                     after:content-[''] 
-                    after:top-full
+                    after:-bottom-[10px]
                     after:absolute after:left-1/3
-                    after:w-0 after:h-0 
-                    after:border-solid after-border-transparent after:border-8 after:border-b-0 after:border-t-teal
+                    after:w-4 after:h-4 
+                    after:bg-teal
+                    after:border-solid after:border-t-teal after:border-l-teal after:border-b-gold after:border-r-gold after:border-2
+                    after:rotate-45
                     `}
-                    // style={{ bottom: (calculateFontSize(word.value) + 14)}}
                 >
-                    <p className="m-0 text-teal-light font-medium pointer-events-none">{ word.description }</p>
+                    <p className="m-0 caption--small text-teal-light font-medium pointer-events-none uppercase">{ word.description }</p>
                 </div>
             </div>
             

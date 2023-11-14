@@ -24,8 +24,8 @@ function BetweenDates(props) {
                             <div></div>
                             <div className="w-7 m-auto grid grid-cols-smallcenter h-4">
                                 <div></div>
-                                <div className="w-1 h-full bg-teal-light m-auto"></div>
-                                <div className="w-full h-1 bg-teal-light mx-auto my-1 -ml-2 opacity-40"></div>
+                                <div className="w-1 h-full bg-gold m-auto"></div>
+                                <div className="w-full h-1 bg-gold mx-auto my-1 -ml-2 opacity-30"></div>
                             </div>
                             <div className="flex items-center">
                                 {

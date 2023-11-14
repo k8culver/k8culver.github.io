@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from 'react';
 import photo from '../../static/IMG_1553.PNG';
 import photoGrey from '../../static/IMG_1552.PNG';
 
-// Addapted from solution found here: https://stackoverflow.com/questions/46292350/make-ball-follow-mouse-on-canvas
+// Adapted from solution found here: https://stackoverflow.com/questions/46292350/make-ball-follow-mouse-on-canvas
 function Canvas() {
     const canvasRef = useRef(null);
     const imageRef = useRef(null);

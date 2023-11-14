@@ -6,9 +6,9 @@ function Reviews() {
         <div className="bg-cover shadow-inner-top-bottom shadow-teal-darker" style={{ 
             backgroundImage: `url(${background})`
           }}>
-            <div className="container m-auto -my-96 py-96">
+            <div className="container m-auto -my-32 py-36 sm:-my-60 sm:py-64 lg:-my-96 lg:py-96">
                 <div className="max-w-3xl m-auto">
-                    <div className="grid grid-flow-row-dense grid-flow-col auto-cols-auto">
+                    <div className="grid grid-flow-row-dense grid-flow-col auto-cols-auto px-4">
                         <Review
                             text='"Kate is a sharp, resourceful developer who uplifts her team and 
                             encourages quality work... 

@@ -44,8 +44,8 @@ function EventDisplay(props) {
                 </div>
             </div>
             <div className="grid grid-cols-smallcenter">
-                <div className={`w-full h-1 bg-teal-light m-auto ${event.importance !== 3 ? 'order-last' : ''}`}></div>
-                <div className="w-1 h-full bg-teal-light m-auto"></div>
+                <div className={`w-full h-1 bg-gold m-auto ${event.importance !== 3 ? 'order-last' : ''}`}></div>
+                <div className="w-1 h-full bg-gold m-auto"></div>
                 <div className={`${event.importance !== 3 ? 'order-first' : ''}`}></div>
             </div>
             <div className={`col-span-3 sm:col-span-2 ${event.importance !== 3 ? 'order-first' : ''}`}></div>

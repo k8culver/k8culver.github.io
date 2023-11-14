@@ -20,7 +20,7 @@ function AboutMe() {
                 setTextStart(prevText => prevText + fullText[textIndex]);
                 setTextEnd(prevText => prevText.substring(1));
                 setTextIndex(prevIndex => prevIndex + 1);
-            }, 40);
+            }, 20);
       
             return () => clearTimeout(timeout);
         }

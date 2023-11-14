@@ -15,11 +15,11 @@ function Review(props) {
         `}>
             <div>
                 <p className="text-white mb-2">{text}</p>
-                <div className="sm:flex justify-between items-end text-center">
+                <div className="sm:flex justify-between items-end">
                     <p className="caption italic text-teal-light mb-0">~ {author}</p>
                     {
                         !!link &&
-                        <div className="ml-4 mt-4 sm:mt-0">
+                        <div className="sm:ml-4 mt-4 sm:mt-0">
                             <Button text="Read full review" link={link} newTab={true} styleType="outline--gold" />
                         </div>
                     }

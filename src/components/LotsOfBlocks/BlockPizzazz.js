@@ -4,8 +4,6 @@ import { useState, useEffect } from 'react';
 function BlockPizzazz(props) {
     const { color, isBottom } = props;
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-    // const [blocks, setBlocks] = useState([]);
-
 
     const randClasses = [
         `bg-${ color }`, // 0: color square

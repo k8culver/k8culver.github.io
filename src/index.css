@@ -13,6 +13,7 @@
     --purple-hover: #eec7d6;
     --gold: #b97438;
     --gold-hover: #eed9c7;
+    --gold-dark: #A16530;
     --white: #f4fafc;
     --black: #233437;
     --transition-slow: 0.5s linear;
@@ -31,7 +32,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
 }
 
-p, ul, a:not(.button), label, ::placeholder {
+p, ul, a:not(.button), ::placeholder {
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
     font-weight: 400;
@@ -45,15 +46,25 @@ p, ul, a:not(.button), label, ::placeholder {
     letter-spacing: 0.025rem;
 }
 
-.caption--small {
+.caption--small, label {
     font-family: 'Montserrat', sans-serif;
     font-size: 0.75rem;
     letter-spacing: 0.025rem;
 }
 
+label {
+    text-transform: uppercase;
+}
+
 ::placeholder {
-    color: var(--teal-light);
+    color: var(--gold);
     font-size: 0.875rem;
+}
+
+input, textarea {
+    box-sizing: border-box;
+    color: var(--teal-darker);
+    font-family: 'Bitter', sans-serif;
 }
 
 ul {
@@ -118,8 +129,8 @@ button:not(.unstyled),
 }
 
 .button.button--outline--gold {
-    background-image: linear-gradient(to left, var(--white) 0%, var(--white) 45%, var(--gold) 60%, var(--gold) 100%);
-    color: var(--gold);
+    background-image: linear-gradient(to left, var(--white) 0%, var(--white) 45%, var(--gold-dark) 60%, var(--gold-dark) 100%);
+    color: var(--gold-dark);
 }
 
 button:not(.unstyled) span,
