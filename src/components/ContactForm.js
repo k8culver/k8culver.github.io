@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import Button from './Button';
 import emailjs from '@emailjs/browser';
+import ReCAPTCHA from 'react-google-recaptcha';
 import iris from '../static/IMG_1557.PNG';
 
 
@@ -87,7 +88,7 @@ function ContactForm() {
                             required
                         ></textarea>
                     </div>
-                    <div className="g-recaptcha" data-sitekey="6Leumg8pAAAAAMJJLJyDk7PydWxRxDygdenxcefq"></div>
+                    <ReCAPTCHA sitekey="6Leumg8pAAAAAMJJLJyDk7PydWxRxDygdenxcefq" />
                     <br/>
                     <Button text={`${isSending ? 'Sending...' : 'Submit'}`} type="submit" disabled={isSending} styleType="outline" />
                 </form>

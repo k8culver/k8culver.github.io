@@ -28,7 +28,7 @@ function Canvas() {
                 if (i < text.length - 1) {
                     typeOut(i + 1, text, x + ctx.measureText(text[i]).width, y);
                 }
-            }, 100);
+            }, 60);
         };
 
         const type = (x, y, isInstant) => {
@@ -61,18 +61,19 @@ function Canvas() {
             drawCircle(x, y, radius);
         };
     
-        const handleMouseOut = () => {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.drawImage(imageGrey, 0, 0, canvas.width, canvas.height);
-            type(canvas.width/8, canvas.height/4, true);
-        };
+        // Code to clear on mouseout
+        // const handleMouseOut = () => {
+        //     ctx.clearRect(0, 0, canvas.width, canvas.height);
+        //     ctx.drawImage(imageGrey, 0, 0, canvas.width, canvas.height);
+        //     type(canvas.width/8, canvas.height/4, true);
+        // };
     
         canvas.addEventListener('mousemove', handleMouseMove);
-        canvas.addEventListener('mouseout', handleMouseOut);
+        // canvas.addEventListener('mouseout', handleMouseOut);
     
         return () => {
             canvas.removeEventListener('mousemove', handleMouseMove);
-            canvas.removeEventListener('mouseout', handleMouseOut);
+            // canvas.removeEventListener('mouseout', handleMouseOut);
         };
     }, []);
 
