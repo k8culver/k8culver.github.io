@@ -1,5 +1,4 @@
 import React, { useState, useRef } from 'react';
-import ReCAPTCHA from 'react-google-recaptcha';
 import Button from './Button';
 import emailjs from '@emailjs/browser';
 import iris from '../static/IMG_1557.PNG';
@@ -8,7 +7,6 @@ import iris from '../static/IMG_1557.PNG';
 function ContactForm() {
     const [isSending, setIsSending] = useState(false);
     const [isSent, setIsSent] = useState(false);
-    const [recaptchaValue, setRecaptchaValue] = useState('');
     const form = useRef();
 
     const [formData, setFormData] = useState({
@@ -33,7 +31,6 @@ function ContactForm() {
             .then((result) => {
                 // show the user a success message
                 setFormData('','','');
-                setRecaptchaValue('');
                 setIsSending(false);
                 setIsSent(true);
             }, (error) => {
@@ -90,15 +87,9 @@ function ContactForm() {
                             required
                         ></textarea>
                     </div>
-                    {/* <ReCAPTCHA
-                        sitekey="your_recaptcha_site_key"
-                        onChange={(value) => setRecaptchaValue(value)}
-                    /> */}
                     <div className="g-recaptcha" data-sitekey="6Leumg8pAAAAAMJJLJyDk7PydWxRxDygdenxcefq"></div>
                     <br/>
                     <Button text={`${isSending ? 'Sending...' : 'Submit'}`} type="submit" disabled={isSending} styleType="outline" />
-
-                    {/* <Button text={`${isSending ? 'Sending...' : 'Submit'}`} type="submit" disabled={isSending || !recaptchaValue} /> */}
                 </form>
                 <div className={`${isSent ? 'absolute top-1/2' : 'hidden'}`}>
                     <p className="text-white">Thanks for reaching out!</p>
