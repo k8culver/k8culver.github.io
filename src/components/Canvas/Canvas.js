@@ -5,13 +5,10 @@ import photoGrey from '../../static/IMG_1552.PNG';
 // Adapted from solution found here: https://stackoverflow.com/questions/46292350/make-ball-follow-mouse-on-canvas
 function Canvas() {
     const canvasRef = useRef(null);
-    const imageRef = useRef(null);
-    const imageRefGrey = useRef(null);
+
     useEffect(() => {
         const canvas = canvasRef.current;
         const ctx = canvas.getContext('2d');
-        // const image = imageRef.current;
-        // const imageGrey = imageRefGrey.current;
         const image = new Image();
         const imageGrey = new Image();
         image.src = photo;
@@ -83,8 +80,6 @@ function Canvas() {
     return (
         <div>
             <canvas ref={canvasRef} className='transition' />
-            {/* <img ref={imageRef} src={photo} alt="Hero Doodle" className='hidden' /> */}
-            {/* <img ref={imageRefGrey} src={photoGrey} alt="Hero Doodle Grey" className='hidden' /> */}
         </div>
     );
 }

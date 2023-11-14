@@ -8,8 +8,8 @@ function Pages() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route exact path="/personal-website/" element={<Home />} />
-                <Route exact path="/personal-website/style-guide" element={<StyleGuide />} />
+                <Route exact path="/" element={<Home />} />
+                <Route exact path="/style-guide" element={<StyleGuide />} />
                 <Route path="*" element={<Lost />} />
             </Routes>
         </BrowserRouter>
