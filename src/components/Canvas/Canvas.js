@@ -1,13 +1,16 @@
 import React, { useRef, useEffect, useState } from 'react';
 import photo from '../../static/IMG_1553.PNG';
 import photoGrey from '../../static/IMG_1552.PNG';
+import reset from '../../static/reset.svg';
 
 // Adapted from solution found here: https://stackoverflow.com/questions/46292350/make-ball-follow-mouse-on-canvas
 function Canvas() {
     const canvasRef = useRef(null);
+    const resetRef = useRef(null);
 
     useEffect(() => {
         const canvas = canvasRef.current;
+        const reset = resetRef.current;
         const ctx = canvas.getContext('2d');
         const image = new Image();
         const imageGrey = new Image();
@@ -54,6 +57,7 @@ function Canvas() {
         };
         
         const handleMouseMove = (e) => {
+            reset.classList.remove('hidden');
             const rect = canvas.getBoundingClientRect();
             const x = e.clientX - rect.left;
             const y = e.clientY - rect.top;
@@ -61,19 +65,19 @@ function Canvas() {
             drawCircle(x, y, radius);
         };
     
-        // Code to clear on mouseout
-        // const handleMouseOut = () => {
-        //     ctx.clearRect(0, 0, canvas.width, canvas.height);
-        //     ctx.drawImage(imageGrey, 0, 0, canvas.width, canvas.height);
-        //     type(canvas.width/8, canvas.height/4, true);
-        // };
+        const handleReset = () => {
+            reset.classList.add('hidden');
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.drawImage(imageGrey, 0, 0, canvas.width, canvas.height);
+            type(canvas.width/8, canvas.height/4, true);
+        };
     
         canvas.addEventListener('mousemove', handleMouseMove);
-        // canvas.addEventListener('mouseout', handleMouseOut);
+        reset.addEventListener('click', handleReset);
     
         return () => {
             canvas.removeEventListener('mousemove', handleMouseMove);
-            // canvas.removeEventListener('mouseout', handleMouseOut);
+            reset.removeEventListener('click', handleReset);
         };
     }, []);
 
@@ -81,6 +85,7 @@ function Canvas() {
     return (
         <div>
             <canvas ref={canvasRef} className='transition' />
+            <img ref={resetRef} src={reset} alt="Reset" className='w-8 float-right mr-4 cursor-pointer hidden' />
         </div>
     );
 }
