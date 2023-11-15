@@ -71,6 +71,14 @@ function Canvas() {
             ctx.drawImage(imageGrey, 0, 0, canvas.width, canvas.height);
             type(window.innerWidth > 700 ? canvas.width/8 : canvas.width/20, canvas.height/4, true);
         };
+
+        const handleWindowResize = () => {
+            canvas.width = window.innerWidth;
+            canvas.height = (imageGrey.height/imageGrey.width)*window.innerWidth;
+            handleReset();
+        };
+
+        window.addEventListener('resize', handleWindowResize);
     
         canvas.addEventListener('mousemove', handleMouseMove);
         reset.addEventListener('click', handleReset);
@@ -78,6 +86,7 @@ function Canvas() {
         return () => {
             canvas.removeEventListener('mousemove', handleMouseMove);
             reset.removeEventListener('click', handleReset);
+            window.removeEventListener('resize', handleWindowResize);
         };
     }, []);
 
