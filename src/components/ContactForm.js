@@ -90,7 +90,7 @@ function ContactForm() {
                     </div>
                     <ReCAPTCHA sitekey="6Leumg8pAAAAAMJJLJyDk7PydWxRxDygdenxcefq" />
                     <br/>
-                    <Button text={`${isSending ? 'Sending...' : 'Submit'}`} type="submit" disabled={isSending} styleType="outline" />
+                    <Button text={`${isSending ? 'Sending...' : 'Send'}`} type="submit" disabled={isSending} styleType="outline" />
                 </form>
                 <div className={`${isSent ? 'absolute top-1/2' : 'hidden'}`}>
                     <p className="text-white">Thanks for reaching out!</p>

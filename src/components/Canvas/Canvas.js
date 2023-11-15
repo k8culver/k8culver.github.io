@@ -21,7 +21,7 @@ function Canvas() {
             canvas.width = window.innerWidth;
             canvas.height = (imageGrey.height/imageGrey.width)*window.innerWidth;
             ctx.drawImage(imageGrey, 0, 0, canvas.width, canvas.height);
-            type(canvas.width/8, canvas.height/4, false);
+            type(window.innerWidth > 700 ? canvas.width/8 : canvas.width/20, canvas.height/4, false);
         };
 
         const typeOut = (i, text, x, y) => {
@@ -36,7 +36,7 @@ function Canvas() {
 
         const type = (x, y, isInstant) => {
             ctx.save();
-            ctx.font = '32px Bitter';
+            ctx.font = window.innerWidth > 700 ? '32px Bitter' : '26px Bitter';
             const text = 'Hello, my name is Kate.';
             if(isInstant) {
                 ctx.fillStyle = '#f4fafc';
@@ -69,7 +69,7 @@ function Canvas() {
             reset.classList.add('hidden');
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             ctx.drawImage(imageGrey, 0, 0, canvas.width, canvas.height);
-            type(canvas.width/8, canvas.height/4, true);
+            type(window.innerWidth > 700 ? canvas.width/8 : canvas.width/20, canvas.height/4, true);
         };
     
         canvas.addEventListener('mousemove', handleMouseMove);

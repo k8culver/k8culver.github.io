@@ -20,7 +20,7 @@ function Review(props) {
                     {
                         !!link &&
                         <div className="sm:ml-4 mt-4 sm:mt-0">
-                            <Button text="Read full review" link={link} newTab={true} styleType="outline--gold" />
+                            <Button text="Read full quote" link={link} newTab={true} styleType="outline--gold" />
                         </div>
                     }
                 
