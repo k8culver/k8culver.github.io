@@ -2,8 +2,8 @@ function Word(props) {
     const { word, isFlipped, handleFlip, exitFlip, id } = props; // prop:word is an object with a word, a value, a description, and classes
 
     const calculateFontSize = (value) => {
-        const minSize = 14;
-        const maxSize = 54;
+        const minSize = window.innerWidth > 700 ? 14 : 12;
+        const maxSize = window.innerWidth > 700 ? 54 : 40;
         const minValue = 1;
         const maxValue = 5;
         const sizeRange = maxSize - minSize;

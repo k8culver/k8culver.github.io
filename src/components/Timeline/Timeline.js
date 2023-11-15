@@ -6,9 +6,9 @@ function Timeline(props) {
     const { events } = props;
 
     return (
-        <div className="px-4">
+        <div className="px-4 md:-mt-20 md:-mb-16 lg:-mt-44 lg:-mb-24 z-10 relative">
             <div className="text-center h-20">
-                <p className="caption--small uppercase text-teal-light">The Future</p>
+                <p className="caption--small uppercase text-teal-light mb-4">The Future</p>
                 <div className="border-solid border-4 border-gold border-b-0 border-l-0 h-4 w-4 -rotate-45 -mb-5 mx-auto"></div>
                 <div className="w-1 h-full bg-gold inline-block"></div>
             </div>
@@ -28,9 +28,9 @@ function Timeline(props) {
             <div className="text-center h-20">                
                 <div className="w-1 h-full bg-gold m-auto"></div>
                 <div className="border-solid border-4 border-gold border-t-0 border-l-0 h-4 w-4 rotate-45 -mt-5 mx-auto"></div>
-                <p className="caption--small uppercase text-teal-light">The Beginning of Time</p>
+                <p className="caption--small uppercase text-teal-light mt-4">The Beginning of Time</p>
             </div>
-            <div className="sm:flex sm:justify-center mt-20 sm:mt-32 text-center">
+            <div className="sm:flex sm:justify-center mt-20 sm:mt-24 text-center">
                 <div className="mb-4 sm:mb-0 sm:mr-4 sm:inline-block">
                     <Button text="Check out my LinkedIn" styleType="outline--gold" link="https://www.linkedin.com/in/kate-culver-333388143" newTab={true} />
                 </div>

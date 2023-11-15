@@ -43,11 +43,11 @@ function ContactForm() {
     };
 
     return (
-        <div className="grid sm:grid-cols-2 -mt-10 md:mt-20">
+        <div className="grid sm:grid-cols-2 max-w-3xl mx-auto -mt-10 lg:-my-16 xl:-my-24">
             <div className="pl-4 sm:pl-20 sm:order-2">
                 <img src={iris} alt="Iris" className='w-36 sm:max-w-xs sm:w-full' />
             </div>
-            <div className="px-4 pt-6 pb-8 mb-4 max-w-sm relative">
+            <div className="px-4 max-w-sm relative">
                 <h2 className="text-teal-light">Contact Me</h2>
                 <form ref={form} onSubmit={sendEmail} className={`${isSent ? 'invisible' : ''}`}>
                     <div className="mb-4">
