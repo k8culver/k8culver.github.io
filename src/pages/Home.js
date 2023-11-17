@@ -37,7 +37,7 @@ function Home() {
 
       const events = [
         {date: 202212, importance: 3, title: 'Software Engineer', company: 'Pela', event: 'Left Pela', image: 'pela.png'},
-        {date: 202204, hideDate: true, importance: 2, title: 'Software Engineer', company: 'Pela', event: 'Started acting as lead developer'},
+        {date: 202204, hideDate: true, importance: 2, title: 'Software Engineer', company: 'Pela', event: 'Took on lead developer responsibilities'},
         {date: 202112, hideDate: true, importance: 1, title: 'Software Engineer', company: 'Pela', event: 'Started training and mentoring Jr. Developers'},
         {date: 202107, importance: 2, title: 'Software Engineer', company: 'Pela', event: 'Promoted to Software Engineer'},
         {date: 202012, hideDate: true, importance: 1, title: 'Software Engineer', company: 'Pela', event: 'Introduced to Node.js and AWS Lambda development'},

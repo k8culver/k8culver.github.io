@@ -3,11 +3,8 @@ import { useState, useEffect } from "react";
 
 function AboutMe() {
     const fullTitle = 'About Me';
-    const fullText = `I am a software engineer and self-proclaimed math enthusiast who finds joy in belting out show tunes and impromptu dancing. 
-    With over five years of experience as a full-stack Software Engineer, I have worked with a diverse array of languages, including (but not limited to) Python, JavaScript, React, HTML, CSS, PHP, GraphQL, and Node.JS.
-    I graduated from the University of Victoria in 2017 with a Bachelor of Science in Mathematics, a minor in Computer Science, and the knowledge that two parallel lines intersect at infinity. 
-    My capacity for creative thinking, complemented by strong analytical skills, makes me an exceptional problem solver. 
-    I can write readable and efficient code, design and build beautiful intuitive interfaces, and I have all the lyrics to Rent's La Vie Boheme memorized. 
+    const fullText = `I have over 5 years of experience working as a software engineer and completed my Bachelor of Science in Mathematics with a minor in Computer Science in 2017. 
+    Combining creative thinking with strong analytical skills, I excel in problem-solving, writing efficient code, and designing intuitive interfaces.
     I'm currently spending my spare time knitting, painting, and taking machine learning courses.`
 
     const [textStart, setTextStart] = useState('');
