@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.59249326.css",
-    "main.js": "/static/js/main.e409feb4.js",
+    "main.js": "/static/js/main.f39f8c7c.js",
     "static/js/787.5809834d.chunk.js": "/static/js/787.5809834d.chunk.js",
     "static/media/IMG_1553.PNG": "/static/media/IMG_1553.b2db57bb3a69279a4264.PNG",
     "static/media/IMG_1557.PNG": "/static/media/IMG_1557.48eec45862c9d6b3775a.PNG",
@@ -13,12 +13,13 @@
     "static/media/uvic.png": "/static/media/uvic.e77f561f0e18e76408b3.png",
     "index.html": "/index.html",
     "static/media/reset.svg": "/static/media/reset.8a61377a62957437ddbff3ada12a57b1.svg",
+    "static/media/dwave.svg": "/static/media/dwave.f88f2a1610b41dbdd2ba.svg",
     "main.59249326.css.map": "/static/css/main.59249326.css.map",
-    "main.e409feb4.js.map": "/static/js/main.e409feb4.js.map",
+    "main.f39f8c7c.js.map": "/static/js/main.f39f8c7c.js.map",
     "787.5809834d.chunk.js.map": "/static/js/787.5809834d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.59249326.css",
-    "static/js/main.e409feb4.js"
+    "static/js/main.f39f8c7c.js"
   ]
 }
