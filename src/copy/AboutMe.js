@@ -3,9 +3,9 @@ import { useState, useEffect } from "react";
 
 function AboutMe() {
     const fullTitle = 'About Me';
-    const fullText = `I have over 5 years of experience working as a software engineer and completed my Bachelor of Science in Mathematics with a minor in Computer Science in 2017. 
+    const fullText = `I have over 6 years of experience working as a software engineer and completed my Bachelor of Science in Mathematics with a minor in Computer Science in 2017.
     Combining creative thinking with strong analytical skills, I excel in problem-solving, writing efficient code, and designing intuitive interfaces.
-    I'm currently spending my spare time knitting, painting, and taking machine learning courses.`
+    I'm currently spending my spare time knitting and practicing aerial acrobatics.`
 
     const [textStart, setTextStart] = useState('');
     const [textEnd, setTextEnd] = useState(fullText);
