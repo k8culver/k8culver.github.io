@@ -6,7 +6,7 @@ function Button(props) {
         <div className="inline-block">
             {
                 link ?
-                <a href={ link } className={`button ${ styleType && "button--" + styleType}`} disabled={isDisabled} type={type} target={newTab ? "_blank" : "_self"}><span>{ text }</span></a>
+                <a href={ link } className={`button ${ styleType && "button--" + styleType}`} disabled={isDisabled} type={type} target={newTab ? "_blank" : "_self"} rel="noreferrer"><span>{ text }</span></a>
                 :
                 <button className={`button ${ styleType && "button--" + styleType}`} disabled={isDisabled} type={type}><span>{ text }</span></button>
             }

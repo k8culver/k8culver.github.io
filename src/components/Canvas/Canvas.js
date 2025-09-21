@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useEffect } from 'react';
 import photo from '../../static/IMG_1553.PNG';
 import photoGrey from '../../static/IMG_1552.PNG';
 import reset from '../../static/reset.svg';

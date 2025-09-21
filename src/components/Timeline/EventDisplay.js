@@ -24,7 +24,7 @@ function EventDisplay(props) {
                         {
                             event.image ?
                             <div className="hidden sm:flex shrink-0 w-8 h-8 items-center justify-center m-auto mr-4">
-                                <img src={require(`../../static/${event.image}`)} className="max-h-full max-w-full" />
+                                <img src={require(`../../static/${event.image}`)} alt={event.event} className="max-h-full max-w-full" />
                             </div>
                             :
                             <></>
